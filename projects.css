@@ -1,0 +1,74 @@
+.project-head
+{
+    font-family: 'Comfortaa', cursive;
+    margin-top: 10px;
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    padding-left: 150vh;
+    font-weight: 700;
+}
+
+.projects-list {
+    height: 1200px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #c2c2c2;
+    margin-left: 2cm;
+    margin-right: 2cm;
+    padding-top: 0.8cm;
+    padding-bottom: 0.8cm;
+    border-radius: 5px;
+    
+}
+
+.project-item-title
+{
+    font-weight: 600;
+    font-family: "Do Hyeon",sans-serif;
+    font-size: x-large;
+}
+
+ .project-item
+ {
+     background-color: white;
+     line-height: 50px;
+     margin: 10px;
+     width: 400px;
+     text-align: center;
+     border-radius: 10px;
+     padding: 8px;
+     box-shadow: 20px;
+     font-family: 'Comfortaa', cursive;
+     font-size: medium;
+ }
+
+
+ 
+ #project-item1
+ {
+    background-image: url(appa.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+ }
+ #project-item2
+ {
+    background-image: url(amma.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+ }
+ #project-item3
+ {
+    background-image: url(pari1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+ }
+
+ #project-item4
+ {
+    background-image: url(pari1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+ }

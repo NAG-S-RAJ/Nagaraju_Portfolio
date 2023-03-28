@@ -1,0 +1,106 @@
+.contact-head
+{
+    font-family: 'Comfortaa', cursive;
+    margin-top: 10px;
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    padding-left: 40px;
+    font-weight: 700;
+}
+
+.MuiGrid-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.img-text {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.img-text a {
+	text-decoration: none;
+    margin-left:15px;
+}
+
+.contact-section p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+    margin-right: 200px;
+    margin-left: 40px;
+    font-family: 'Comfortaa', cursive;
+    float: left;
+}
+
+.contact-desc {
+	display: flex;
+	align-items: center;
+}
+
+.contact-text {
+	font-size: 1.5rem;
+    font-family: 'Comfortaa', cursive;
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 900px) {
+	.img-text {
+		font-size: 1.2rem;
+	}
+	.contact-text {
+		font-size: 1rem;
+	}
+	.img-text img {
+		margin-left: 20px;
+		width: 32px !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.contact-section {
+		margin-top: 30px;
+	}
+}
+
+.MuiGrid-item {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (min-width: 600px){
+.MuiGrid-grid-sm-6 
+{
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+}
+}
+
+.img-text a {
+    text-decoration: none;
+}
+
+.blue-color {
+    color: #537df8;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 900px){
+.img-text {
+    font-size: 1.2rem;
+}
+}
+
+.img-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+

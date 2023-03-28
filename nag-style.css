@@ -1,0 +1,84 @@
+
+.pplmain
+ {
+    height: 800px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(29, 36, 36,0.4);
+    margin-left: 2cm;
+    margin-right: 2cm;
+    padding-top: 0.8cm;
+    padding-bottom: 0.8cm;
+ }
+
+ .ppl
+ {
+     background-color: rgba(37, 38, 43, 0.5);
+     line-height: 50px;
+     margin: 10px;
+     width: 400px;
+     text-align: center;
+ }
+ #ppl1
+ {
+    background-image: url(appa.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+ }
+ #ppl2
+ {
+    background-image: url(amma.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+ }
+ #ppl3
+ {
+    background-image: url(pari1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+ }
+ .two
+{
+    display: flex;
+    
+}
+ .conclusion1
+{
+    background-color: rgba(255, 255, 255,0.4);
+    margin: -4px 0 -20px -10px;
+    width: 3000px;
+    padding: 15px 0 0 40px;
+    font-size: larger;
+    
+}
+ .conclusion2
+{
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 300px;
+    background-position: center;
+    background-size: 50%;
+    margin: 0 0 0 0;
+    width: 3000px;
+    padding: 10px;
+}
+
+
+.footer {
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5%;
+	padding: 30px 0;
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 1rem;
+	letter-spacing: 1.5px;
+}
+
+
+
+
+  
+  

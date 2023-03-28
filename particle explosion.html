@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Animation Example</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas" width="200" height="200"></canvas>
+  
+  <script>
+    const canvas = document.getElementById('myCanvas');
+    const context = canvas.getContext('2d');
+
+    let x = canvas.width / 2;
+    let y = canvas.height / 2;
+    let radius = 50;
+    let dx = 5;
+    let dy = -5;
+
+    function drawCircle() {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.beginPath();
+      context.arc(x, y, radius, 0, Math.PI * 2);
+      context.fillStyle = 'red';
+      context.fill();
+      context.closePath();
+
+      if (x + dx > canvas.width - radius || x + dx < radius) {
+        dx = -dx;
+      }
+      if (y + dy > canvas.height - radius || y + dy < radius) {
+        dy = -dy;
+      }
+
+      x += dx;
+      y += dy;
+    }
+
+    setInterval(drawCircle, 10);
+  </script>
+</body>
+</html>

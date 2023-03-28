@@ -1,0 +1,81 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header
+{ 
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: -1;
+    
+}
+
+.head-scrolled
+{
+    background-color: black;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    z-index: +3;
+}
+
+.title
+{
+    color: black;
+    margin-top: 0.4cm;
+    margin-left: 1cm;
+    display: inline-block;
+    font-family: 'Comfortaa', cursive;
+    font-size: xx-large;
+    letter-spacing: 0.5mm;
+    word-spacing: 1mm;
+    font-weight: bold;
+    text-shadow: 3px 5px rgb(117, 112, 112);
+    
+    
+}
+
+.title-scrolled
+{
+    color: white;
+}
+
+.icons
+{   
+    /* color: white; */
+    display: flex;
+    float: right;
+    font-family: 'Comfortaa', cursive;
+    margin: 10px;
+    justify-content: space-between;
+    padding: 5px;
+    list-style: none;
+    color: black;
+}
+
+.link
+{
+    color: rgb(242, 242, 242);
+    text-decoration: none;
+    padding: 5px 5px 5px 5px;
+}
+
+.link-scrolled
+{
+    color: white;
+}
+
+.link:hover
+{
+    color: black;
+    background: white;
+    border-radius: 10%;
+}

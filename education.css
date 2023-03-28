@@ -1,0 +1,39 @@
+.edu-head
+{
+    font-family: 'Comfortaa', cursive;
+    margin-top: 10px;
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+    padding-left: 140vh;
+    font-weight: 700;
+}
+
+.education-section 
+{
+    margin-top: 50px;
+    padding-left: 40px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 100vh;
+}
+  
+.education-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .education-item h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .education-item p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
