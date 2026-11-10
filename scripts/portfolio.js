@@ -1,6 +1,7 @@
 const progressIndicator = document.querySelector('.scroll-progress span');
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNavigation = document.querySelector('#site-navigation');
+const commandDialog = document.querySelector('.command-dialog');
 const navigationLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
 const observedSections = navigationLinks
     .map((link) => document.querySelector(link.getAttribute('href')))
@@ -16,6 +17,63 @@ function updateReadingProgress() {
 window.addEventListener('scroll', updateReadingProgress, { passive: true });
 window.addEventListener('resize', updateReadingProgress);
 updateReadingProgress();
+
+if (commandDialog instanceof HTMLDialogElement) {
+    const commandTrigger = document.querySelector('.command-trigger');
+    const commandSearch = commandDialog.querySelector('input[type="search"]');
+    const commandOptions = [...commandDialog.querySelectorAll('.command-option')];
+    const commandEmpty = commandDialog.querySelector('.command-empty');
+
+    function openCommandPalette() {
+        if (commandDialog.open) return;
+        commandDialog.showModal();
+        commandSearch.focus();
+    }
+
+    function filterCommands() {
+        const query = commandSearch.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        commandOptions.forEach((option) => {
+            const matches = option.textContent.toLowerCase().includes(query);
+            option.hidden = !matches;
+            if (matches) visibleCount += 1;
+        });
+        commandEmpty.hidden = visibleCount > 0;
+    }
+
+    commandTrigger.addEventListener('click', openCommandPalette);
+    commandDialog.querySelector('.command-close').addEventListener('click', () => commandDialog.close());
+    commandSearch.addEventListener('input', filterCommands);
+    commandOptions.forEach((option) => {
+        option.addEventListener('click', () => {
+            const destination = option.dataset.commandHref;
+            commandDialog.close();
+            if (destination) document.querySelector(destination)?.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    commandDialog.addEventListener('click', (event) => {
+        if (event.target === commandDialog) commandDialog.close();
+    });
+    commandDialog.addEventListener('close', () => {
+        commandSearch.value = '';
+        filterCommands();
+        commandTrigger.focus();
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+            event.preventDefault();
+            openCommandPalette();
+        }
+        if (event.key === 'Escape' && commandDialog.open) {
+            commandDialog.close();
+        }
+        if (event.key === 'Enter' && commandDialog.open && event.target === commandSearch) {
+            commandDialog.querySelector('.command-option:not([hidden])')?.click();
+        }
+    });
+}
 
 function closeNavigation() {
     if (!menuToggle || !siteNavigation) return;
@@ -99,5 +157,3 @@ if ('IntersectionObserver' in window) {
         revealObserver.observe(target);
     });
 }
-
-observedSections.forEach((section) => sectionObserver.observe(section));
